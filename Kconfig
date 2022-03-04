@@ -1,0 +1,19 @@
+#
+# For a description of the syntax of this configuration file,
+# see the file kconfig-language.txt in the NuttX tools repository.
+#
+
+config EXTERNAL_LUA_USERLEDS_MODULE
+	tristate "Userleds Lua module"
+	default n
+	depends on USERLED_LOWER && !ARCH_LEDS
+	---help---
+		Lua module to drive userleds
+
+if EXTERNAL_LUA_USERLEDS_MODULE
+
+config EXTERNAL_LEDS_DEVPATH
+	string "LED device path"
+	default "/dev/userleds"
+
+endif # EXAMPLES_LEDS

@@ -1,0 +1,7 @@
+*.o
+*.a
+*.d
+.depend
+.dirlinks
+.kconfig
+Make.dep
