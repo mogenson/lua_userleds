@@ -22,12 +22,12 @@ include $(APPDIR)/Make.defs
 
 CSRCS = luamod_userleds.c
 
-# Set LUAMODNAME and include LuaModule.mk to add this module to the list of
+# Set LUAMODNAME and include Module.mk to add this module to the list of
 # builtin modules for the Lua interpreter. LUAMODNAME should match the
 # module's luaopen function.
 
 LUAMODNAME = userleds
 
-include $(APPDIR)/interpreters/lua/LuaModule.mk
+include $(APPDIR)/interpreters/lua/Module.mk
 
 include $(APPDIR)/Application.mk
